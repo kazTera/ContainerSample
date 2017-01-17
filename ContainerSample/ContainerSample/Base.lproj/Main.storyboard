@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="ContainerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awJ-10-3nl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="367"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="eGB-B6-NfI"/>
+                                </constraints>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-pb-qL6">
+                                <rect key="frame" x="93" y="582" width="189" height="29"/>
+                                <segments>
+                                    <segment title="ComponentA"/>
+                                    <segment title="ComponentB"/>
+                                </segments>
+                                <connections>
+                                    <action selector="showComponent:" destination="BYZ-38-t0r" eventType="valueChanged" id="XeK-RW-Dru"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="awJ-10-3nl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4ev-nj-b8L"/>
+                            <constraint firstItem="awJ-10-3nl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MTG-W1-Lnh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LKI-pb-qL6" secondAttribute="bottom" constant="57" id="QwH-Ug-yCy"/>
+                            <constraint firstItem="LKI-pb-qL6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqU-GR-XrM"/>
+                            <constraint firstAttribute="trailing" secondItem="awJ-10-3nl" secondAttribute="trailing" id="ml9-OI-Wqn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="awJ-10-3nl" id="49V-zZ-sTN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="81"/>
+        </scene>
+        <!--ComponentA View Controller-->
+        <scene sceneID="29Y-qA-Dhe">
+            <objects>
+                <viewController storyboardIdentifier="componentA" id="51C-07-d10" customClass="ComponentAViewController" customModule="ContainerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lXC-3d-yzB"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPT-eg-CR0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A67-v6-ekA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93273161049999997" green="0.19317553749999999" blue="0.97925549749999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="367"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbd-bX-GjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-48"/>
+        </scene>
+        <!--ComponentB View Controller-->
+        <scene sceneID="spg-lK-3ta">
+            <objects>
+                <viewController storyboardIdentifier="componentB" id="l1k-dn-PTq" customClass="ComponentBViewController" customModule="ContainerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WTS-8b-WRE"/>
+                        <viewControllerLayoutGuide type="bottom" id="E20-Y5-lHQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wkq-DF-2S3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.46790717009999999" green="1" blue="0.094607245859999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="367"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFy-9P-LWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="350"/>
+        </scene>
+    </scenes>
+</document>
